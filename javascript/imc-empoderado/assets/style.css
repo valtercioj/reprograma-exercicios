@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.col {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+    margin: 20px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#tabela {
+    align-items: center;
+}
+
+td, th {
+    width: 200px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col {
+        width: 60%;
+    }
+
+    .resultado {
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .col {
+        width: 90%;
+        padding: 5px;
+        margin: 15px 5px;
+    }
+
+    td, th {
+        padding: 5px 0;
+    }
+
+    .resultado {
+        margin-bottom: 70px;
+    }
+}
+
+th {
+    background-color: rgb(228, 228, 228);
+    padding: 10px;
+}
+
+td {
+    padding: 5px;
+}
+
+.linha1{
+    background-color: #9bdaeb;
+    padding: 10px;
+}
+
+.linha2{
+    background-color: #44d185;
+    padding: 10px;
+}
+
+.linha3{
+    background-color: #fdff71;
+    padding: 10px;
+}
+
+.linha4{
+    background-color: #ff5e5e;
+    padding: 10px;
+}
+
+.linha5{
+    background-color: #ffa0bc;
+    padding: 10px;
+}
+
+label, p {
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+input {
+    border: solid 1px #ccc;
+    width: 100%;
+    padding: 6px;
+    margin: 8px 0;
+}
+
+input::placeholder {
+    font-family: 'Lato', sans-serif;
+    color: #ccc;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 35px;
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+@media (max-width: 500px) {
+    button {
+        margin: 10px auto;
+    }
+}
+
+img {
+    width: 100%;
+}
+
+.rodape {
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(172, 117, 172);
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    padding: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .rodape {
+        position: unset;
+    }
+}
+
+.rodape p {
+    font-weight: unset;
+    margin: 0;
+}
+
+.rodape a {
+    color: rgb(77, 6, 77);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.rodape a:hover {
+    color: #ccc;
+    cursor: pointer;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|McLaren|Lato|Montserrat:400,600,700" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="./script.js"></script>
+    <title>PPTLS</title>
+</head>
+<body>
+    <main class="container">
+        <div class="box">
+            <div class="titulo">
+                <h1>Pedra &<br>Papel &<br>Tesoura &<br>Lagarto &<br>Spock.</h1>
+                <h2>👊 📃 ✂️ 🦎 🖖</h2>
+            </div>
+        </div>
+        <div class="box inicio">
+            <div id="inicio" class="nome">
+                <label>Qual é o seu nome?</label>
+                <input id="nomeJogador" type="text">
+                <button id="botaoComecar" class="botao">Vamos começar</button>
+            </div>
+            <div id="jogo" class="jogo-none">
+                <div class="jogo">
+                    <label>Escolha uma das opções:</label>
+                    <select id="escolhaJogador" class="seletor">
+                        <option></option>
+                        <option value="Pedra">Pedra 👊</option>
+                        <option value="Papel">Papel 📃</option>
+                        <option value="Tesoura">Tesoura ✂️</option>
+                        <option value="Lagarto">Lagarto 🦎</option>
+                        <option value="Spock">Spock 🖖</option>
+                    </select>
+                    <button id="botaoJogar" class="botao botao-jogar">Jogar</button>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="resultado">
+                <div id="combinacao"></div>
+                <div id="vencedor" class="vencedor"></div>
+                <div id="gif">
+                    <img src="https://media.giphy.com/media/xUOxfcveHmoOpeM1y0/giphy.gif">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="rodape">
+            <p>Desenvolvido por <a href="https://github.com/ninasolon" target="_blank">Nina Solon</a> {reprograma}</p>
+        </footer>
+</body>
+</html>

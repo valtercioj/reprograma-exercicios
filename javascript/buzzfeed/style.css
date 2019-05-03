@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 18px;
+}
+
+h1 {
+    margin-top: 40px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.img-header {
+    width: 50vw;
+    margin: 30px 0;
+}
+
+.opcoes {
+    margin: 30px auto;
+    text-align: left;
+    width: 90%;
+}
+
+.checkbox {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+}
+
+label {
+    margin-left: 10px;
+}
+
+button {
+    border: none;
+    background-color: green;
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 16px;
+}
+
+.resultado {
+    margin: 40px auto;
+    font-weight: bold;
+    width: 60vw;
+}
+
+footer {
+    padding: 10px;
+
+}
+

@@ -1,0 +1,312 @@
+body {
+    margin: 0;
+    font-family: 'Asap', Arial, Helvetica, sans-serif;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../img/bg-banner.png');
+    min-height: 87vh;
+    /* width: 100vw; deixa margem para fora*/
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.cabecalho__texto {
+    padding: 150px;
+    text-align: center;
+    color: gainsboro;
+}
+
+h1 {
+    font-family: 'Flamenco', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.cabecalho p {
+    margin: 0;
+}
+
+.botao {
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FEDD6A;
+    color: rgb(116, 88, 19);
+    padding: 10px 30px;
+    font-weight: bold;
+}
+
+.navegacao {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0; /* paddind lateral arrastou tudo pra direita */
+}
+
+.menu {
+    font-size: 12.5px;
+    text-transform: uppercase;
+    color: #e4e0e0;
+    
+}
+
+.menu li {
+    display: inline-block;
+    list-style: none;
+    padding: 8px;
+}
+
+.menu__link { /* só funcionou dentro de <a> e não de <li> */
+    text-decoration: none;
+    color: rgb(235, 188, 60);
+    border: 1px solid rgb(235, 188, 60);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.o-que-e {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.o-que-e img {
+    height: 123px;
+}
+
+.o-que-e__texto {
+    width: 380px;
+    margin: 50px 20px;
+}
+
+h2 {
+    font-family: 'Flamenco', Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+ 
+.o-que-e p, .como-funciona p {
+    font-size: 15px;
+    color: #7e7b7b;
+}
+
+.como-funciona {
+    text-align: center;
+}
+
+.como-funciona__descricao {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.passos {
+    width: 30vw;
+}
+
+.passos span {
+    font-weight: bold;
+}
+
+.servicos {
+    text-align: center;
+    background-image: url(../img/bg-servicos.png);
+    padding: 40px 0;
+    margin-top: 20px;
+    background-size: cover;
+    min-height: 84vh;
+}
+
+.servicos__lista {
+    display: flex;
+    justify-content: center;
+}
+
+.servicos__descricao {
+    width: 24vw;
+    background-color: rgb(43, 193, 209);
+    border-radius: 10px;
+    margin: 0 10px;
+    color: #fff;
+    padding: 15px;
+    height: 400px;
+    position: relative; /* position nova */
+}
+
+.servicos h3 {
+    font-size: 24px;
+    margin-top: 50px;
+}
+
+.botao__servicos {
+    position: absolute; /* position nova */
+    bottom: -17px;
+    right: 110px;
+    font-size: 14.5px;
+}
+
+.curiosidades {
+    text-align: center;
+    background-image: url(../img/bg-numeros.png);
+    padding: 40px;
+    background-size: cover;
+    color: #fff;
+}
+
+.numeros {
+    display: flex;
+    justify-content: center;
+}
+
+.numeros__topico {
+    width: 15vw;
+    padding: 0 20px;
+}
+
+.numeros__topico h3 {
+    color: #FEDD6A;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+}
+
+.contato {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contato h2 {
+    margin: 15px 0;
+}
+
+.formulario {
+    margin: 20px 0 5px 0;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+}
+
+.campo input, .campo textarea {
+    background-color: #f3f394;
+    border: none;
+    padding: 5px;
+}
+
+.contato button {
+    width: 440px;
+    height: 45px;
+    border: none;
+    border-radius: 2px;
+    background-color: #1a8cff;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffff66;
+    padding: 30px 0;
+    height: 170px;
+}
+
+.newsletter h4 {
+    font-family: 'Flamenco', Arial, Helvetica, sans-serif;
+    margin: 0 0 30px 0;
+    font-size: 40px;
+}
+
+.cta input {
+    padding: 6px 0;
+    font-size: 16px;
+    width: 450px;
+    margin-bottom: 10px;
+}
+
+.cta button {
+    background-color: tomato;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 40px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-around;
+    background-color: #595959;
+    color: #fff;
+}
+
+.rodape ul {
+    margin-top: 25px;
+}
+
+.rodape li {
+    font-family: 'Flamenco', Arial, Helvetica, sans-serif;
+    list-style: none;
+    font-size: 12px;
+    padding: 2px;
+}
+
+.empresa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.empresa img {
+    margin: 8px 0;
+    width: 110px;
+}
+
+.empresa span {
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.empresa a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.redes-sociais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.redes-sociais img {
+    margin: 5px;
+    width: 30px;
+}

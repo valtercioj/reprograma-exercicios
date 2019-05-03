@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    color: rgba(0, 0, 0, .5);
+}
+
+h1 {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 7.5rem;
+    font-weight: normal;
+}
+
+h2 {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.5714rem;
+    font-weight: normal;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #829dad;
+}
+
+a:hover {
+    color: #3c6360;
+}
+
+/* início navegação */
+.navegacao {
+    background-color: #a0bed0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    height: 70px;
+}
+
+.navegacao__menu ul {
+    padding: 4vh 10vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navegacao__menu a {
+    color: #fff;
+    font-weight: bold;
+    margin: 0 2vw;
+}
+
+.navegacao__menu a:hover {
+    color: rgba(255, 255, 255, .5);
+}
+
+.menu-hamburger {
+    display: none;
+}
+
+.transition {
+    transition: all 1s;
+}
+
+/* início header */
+.container {
+    width: 100%;
+}
+
+.banner {
+    background-image: url(../img/foto-banner.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.cabecalho {
+    margin-top: 70px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+}
+
+.cabecalho__titulo {
+    color: rgba(255, 255, 255, .9);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+.cabecalho__subtitulo {
+    color: rgba(255, 255, 255, .7);
+    font-size: 1.2857rem;
+    width: 35vw;
+}
+
+.botao {
+    background-color: #829dad;
+    color: #fff;
+    border: none;
+    border-radius: 5%;
+    font-size: 0.9285rem;
+    text-transform: uppercase;
+    padding: 3vh 4vw;
+    margin-top: 5vh;
+    letter-spacing: 1px;
+}
+
+.botao:hover {
+    background-color: #36b0e0;
+}
+
+/* início sobre */
+.sobre {
+    background-color: #161616;
+    text-align: center;
+}
+
+.sobre__texto {
+    padding: 10vh 0;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.sobre__texto h2 {
+    color: #fff;
+    font-weight: normal;
+    margin-bottom: 3vh;
+    
+}
+
+.sobre__texto p {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* início sibéria */
+.destaque {
+    display: flex;
+    justify-content: center;
+}
+
+.siberia {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 10vh 0;
+}
+
+.siberia img {
+    width: 70%;
+}
+
+.destaque__borda {
+    width: 8px;
+    height: 120px;
+    background-color: #829dad;
+    display: block;
+}
+
+.destaque__texto {
+    width: 30%;
+    padding-left: 3%;
+}
+
+.destaque__texto h2 {
+    color: #000;
+    margin-bottom: 2vh;
+}
+
+/* início mosaico */
+.mosaico {
+    margin-bottom: 15vh;
+}
+
+.mosaico__bloco {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    background-color: #161616;
+}
+
+.mosaico__bloco img {
+    width: 50%;
+}
+
+.mosaico__bloco p {
+    padding-bottom: 3vh;
+}
+
+.mosaico__texto {
+    width: 50%;
+    color: rgba(255, 255, 255, .5);
+    padding: 0 5vw;
+}
+
+.mosaico__texto h2 {
+    color: #fff;
+    margin-bottom: 2vh;
+}
+
+.antartida {
+    text-align: right;
+    margin-bottom: 2vh;
+}
+
+/* início mapa */
+.contato {
+    background-image: url(../img/foto-footer.jpg);
+    background-size: cover;
+    padding: 10vh 0;
+    text-align: center;
+    color: #fff;
+}
+
+.mapa h2 {
+    margin-bottom: 8vh;
+}
+
+.mapa {
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* início formulário */
+.formulario {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    text-align: left;
+    font-size: 1.1rem;
+    margin: 3vh 0;
+}
+
+.campo input::placeholder, .campo textarea::placeholder {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, .5);
+}
+
+.campo input, .campo textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: .8%;
+}
+
+.campo label {
+    padding: .8%;
+}
+
+/* início rodapé */
+.rodape {
+    background-color: #161616;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.rodape__conteudo {
+    padding: 8vh 0;
+    text-align: center;
+}
+
+.rodape__conteudo > a {
+    font-weight: bold;
+}
+
+.redes-sociais {
+    margin: 5vh 0;
+}
+
+.redes-sociais img {
+    opacity: .5;
+    padding: 0 1vw;
+}
+
+.redes-sociais img:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+
+    .navegacao {
+        background-color: #fff;
+        height: 10vh;
+    }
+
+    .navegacao__menu {
+        display: flex;
+        justify-content: flex-end;
+        padding: 2.5vh 8vw;
+    }
+
+    .navegacao__menu ul {
+        display: none;
+    }
+
+    .menu-hamburger {
+        display: inline-block;
+        border: 1px solid #a0bed0;
+        border-radius: 5%;
+        padding: 2px;
+    }
+
+    .banner {
+        margin-top: 10vh;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .cabecalho {
+        min-height: 60vh;
+    }
+
+    .cabecalho__subtitulo {
+        margin-top: 5vh;
+        width: 80%;
+        font-size: 1.1rem;
+    }
+
+    .botao {
+        padding: 2vh 5vw;
+    }
+
+    .sobre__texto {
+        width: 80vw;
+    }
+
+    .siberia, .mosaico__bloco {
+        width: 80%;
+        display: block;
+        margin: 5vh auto 0 auto;
+        text-align: center;
+    }
+
+    .siberia img, .destaque__texto, .mosaico__bloco img, .mosaico__texto {
+        width: 100%;
+    }
+
+    .destaque__texto {
+        padding: 0;
+    }
+
+    .destaque__texto h2, .groenlandia, .antartida {
+        margin-top: 3vh;
+        text-align: center;
+    }
+
+    .antartida {
+        padding-top: 3vh;
+    }
+
+    .destaque__borda {
+        display: none;
+    }
+
+    .mosaico {
+        margin-bottom: 5vh;
+    }
+
+    .contato {
+        padding: 5vh 0;
+    }
+
+    .mapa {
+        width: 90%;
+    }
+
+    .mapa h2 {
+        margin-bottom: 5vh;
+    }
+}
+

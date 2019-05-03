@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 60vw;
+    margin-top: 10vh;
+}
+
+.play {
+    height: 70px;
+    cursor: pointer;
+}

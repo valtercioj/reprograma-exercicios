@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.formulario {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 500px;
+}
+
+.grupo-campo {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.grupo-campo > label {
+    width: 40%;
+    text-align: right;
+}
+
+.meia-coluna, .grupo-campo > input, .grupo-campo > textarea, .grupo-campo > select {
+    width: 54%;
+}
+
+.botao {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+    color: rgb(87, 87, 87);
+}
+
+.botao--roxo {
+    background-color: blueviolet;
+    color: white;
+    margin-left: 15px;
+}
+
+.botao--roxo:hover {
+    background-color: rgb(69, 21, 114);
+}
+
+input:focus {
+    border: 1px solid blueviolet;
+}

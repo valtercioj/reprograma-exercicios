@@ -1,0 +1,72 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <Title>Formulário</Title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <section>
+        <form action="sucesso.html" method="POST" class="formulario"> <!--confirmar method-->
+
+            <div class="grupo-campo">
+                <label for="texto">Texto</label>
+                <input type="text" name="texto">
+            </div>
+
+            <div class="grupo-campo">
+                <label for="senha">Senha</label>
+                <input type="password" name="senha">
+            </div>
+
+            <div class="grupo-campo">
+                <label for="mulher-talentosa">Confirme aqui que você é uma mulher cheia de talentos</label>
+                <div class="meia-coluna">
+                <input type="checkbox" name="mulher-talentosa" value="cheia-de-talentos"><span>Confirmo que sou mesmo</span>
+                </div>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="talento">Escolha uma opção</label>
+
+                <div class="meia-coluna">
+                <input type="radio" name="talento" value="super-forca"><span>Super força</span> 
+                <input type="radio" name="talento" value="ser-invisivel"><span>Ser invisível</span>
+                <input type="radio" name="talento" value="ler-mentes"><span>Ler mentes</span>
+                <input type="radio" name="talento" value="super-velocidade"><span>Super velocidade</span>
+                </div>
+            </div>
+            
+            <div class="grupo-campo">
+                <label for="topico">Selecione um tópico</label>
+                <select name="topico">
+                    <option value="site-bonito">Deixar meu site mais bonito</option>
+                    <option value="acabar-patriarcado">Acabar com o patriarcado</option>
+                    <option value="revolucao-feminista">Fazer a revolução feminista</option>
+                </select>
+            </div>
+            
+            <div class="grupo-campo">
+                <label for="valor">Escolha um valor</label>
+                <input type="number" min='10' max='20' name="valor">
+            </div>
+
+            <div class="grupo-campo">
+                <label for="comentario">Comentário</label>
+                <textarea name="comentario" rows=4></textarea>
+            </div>
+
+            <div class="grupo-campo">
+                <div></div>
+                <div class="meia-coluna"> 
+                    <input class="botao" type="reset">
+                    <input class="botao botao--roxo" type="submit">
+                </div>
+            </div>
+
+        </form>
+    </section>
+</body>
+</html>

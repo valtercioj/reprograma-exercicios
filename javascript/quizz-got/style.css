@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: sans-serif;
+    text-align: center;
+    color: #fff;
+    font-family: 'Cinzel', serif;
+}
+
+h1 {
+    margin-top: 70px;
+    font-size: 36px;
+}
+
+.inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-home {
+    width: 300px;
+    margin: 30px 0;
+}
+
+button {
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    background-color: cadetblue;
+    box-shadow: 0px 8px 15px rgba(97, 87, 87, 0.356);
+    cursor: pointer;
+    color: #000;
+}
+
+.jogo-off, .inicio-none {
+    display: none;
+}
+
+.jogo-on {
+    margin-top: 40px;
+}
+
+p {
+    margin: 5px auto;
+    color: rgb(255, 241, 161);
+    font-size: 18px;
+}

@@ -1,0 +1,73 @@
+th, td, tr {
+    border-right: 1px solid #c4c4c4;
+    padding: 10px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+tbody > tr:nth-child(odd) {
+    background-color: #dfdfdf;
+}
+
+.planos {
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.autonomo, .pequenas-empresas {
+    color: #ffffff;
+    padding: 10px 40px;
+}
+
+.autonomo {
+    background-color: #009e2c;
+}
+
+.pequenas-empresas {
+    background-color: #0078c1;
+}
+
+tr td:first-child {
+    text-align: left;
+    padding-right: 45px;
+}
+
+.linha-botao button {
+    background-color: orangered;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 10px 15px;
+    border-radius: 5%;
+}
+
+.perfil > th {
+    padding: 10px;
+    border-bottom: none;
+}
+
+.linha-botao > th {
+    padding: 10px;
+    border-top: none; 
+}
+
+.perfil {
+    font-size: 15px;
+}
+
+.check-azul {
+    color: #0078c1;
+    font-weight: bold;
+}
+
+.check-verde {
+    color: #009e2c;
+    font-weight: bold;
+}

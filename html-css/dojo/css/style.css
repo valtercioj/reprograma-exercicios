@@ -1,0 +1,110 @@
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow:  0px 3px 4px -2px #dbdbdb; 
+}
+.logo {
+    width: 100px;
+}
+
+.menu {
+    font-size: 14px;
+    list-style: none;
+}
+
+.menu li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.botao {
+    padding: 10px 15px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.botao--roxo {
+    background-color: #791999;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.demo {
+    width: 500px;
+    margin-left: 100px;
+}
+
+.botao--rosa {
+    background-color: #e9075e;
+}
+
+.container a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #000;
+    margin-left: 10px;
+}
+
+.titulo2 {
+    text-align: center;
+    font-size: 20px;
+    margin: 30px 0;
+}
+
+.container__depoimento {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 60px;
+}
+
+.depoimento {
+    width: 270px;
+    margin: 0 50px;
+}
+
+.depoimento--titulo {
+    border-bottom: 3px solid #791999;
+}
+
+.depoimento--texto {
+    font-size: 13px;
+    margin: 15px 0;
+}
+
+.depoimento--aluna {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.depoimento--profissao {
+    font-size: 14px;
+    margin-top: 0;
+}
+
+.rodape {
+    width: 100%;
+    background-color: #e9075e;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    bottom: 0;
+    margin-top: 30px;
+}
