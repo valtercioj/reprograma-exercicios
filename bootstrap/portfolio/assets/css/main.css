@@ -1,0 +1,26 @@
+.cabecalho {
+    background-image: url("../img/header-bg.jpg");
+    background-position: center;
+    height: 80vh;
+    position: relative;
+}
+
+.cabecalho-texto {
+    position: absolute;
+    top: 180px;
+    right: 0;
+    left: 0;
+}
+
+.card-servico img {
+    width: 150px;
+}
+
+.form-contato {
+    background-image: url("../img/map-image.png");
+    height: 100vh;
+}
+
+footer img {
+    width: 35px;
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container">
+                <a class="navbar-brand text-warning" href="#">Nina Solon</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link text-white" href="#servicos">Serviços</a>
+                    <a class="nav-item nav-link text-white" href="#portfolio">Portfólio</a>
+                    <a class="nav-item nav-link text-white" href="#">Sobre</a>
+                    <a class="nav-item nav-link text-warning" href="#contato">Contato</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="text-white text-center cabecalho-texto">
+            <p class="font-italic">Seja bem-vindx!</p>
+            <h1 class="text-capitalize">Dev Front-end</h1>
+            <button type="button" class="btn btn-warning text-white text-uppercase mt-3">Saiba mais</button>
+        </div>
+    </header>
+
+    <section class="container text-center py-5" id="servicos">
+        <h4>Serviços</h4>
+        <p class="font-italic">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <div class="card-group card-servico mt-5">
+            <div class="card col-sm d-block border-0">
+                <img class="card-img-top" src="./assets/img/frontend-icon.png" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Desenvolvimento Web</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, illo? Asperiores quod magni exercitationem consequuntur voluptate amet et sint officiis placeat harum beatae modi, cupiditate quo rem at ratione sequi!</p>
+                </div>
+            </div>
+            <div class="card col-sm d-block border-0">
+                <img class="card-img-top" src="./assets/img/frontend-icon.png" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Design Responsivo</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem recusandae culpa tempore, dicta reiciendis non similique ut soluta, illo rem magni quibusdam laborum et doloribus, nihil autem cum fuga dolorem.</p>
+                </div>
+            </div>
+            <div class="card col-sm d-block border-0">
+                <img class="card-img-top" src="./assets/img/frontend-icon.png" alt="Imagem de capa do card">
+                <div class="card-body">
+                    <h5 class="card-title">Produção de Conteúdo</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui ex cumque inventore voluptatem. Incidunt non labore optio harum at cupiditate consequatur iste voluptate. Exercitationem, debitis magni?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="bg-light text-center py-5" id="portfolio">
+        <div class="container">
+            <h4>Portfólio</h4>
+            <p class="font-italic">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <div class="card-group card-servico mt-5">
+                <div class="card col-sm mx-sm-4 border-0 p-0" data-toggle="modal" data-target="#modalExemplo">
+                    <img class="card-img-top w-100" src="./assets/img/01-thumbnail.jpg" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">Projeto 1</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Você é uma...</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body text-uppercase">
+                        Máquina de Vencer
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="card col-sm mx-sm-4 border-0 p-0">
+                    <img class="card-img-top w-100" src="./assets/img/02-thumbnail.jpg" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">Projeto 2</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="card col-sm mx-sm-4 border-0 p-0">
+                    <img class="card-img-top w-100" src="./assets/img/03-thumbnail.jpg" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">Projeto 3</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-group card-servico mt-4">
+                <div class="card col-sm mx-sm-4 border-0 p-0">
+                    <img class="card-img-top w-100" src="./assets/img/04-thumbnail.jpg" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">Projeto 4</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="card col-sm mx-sm-4 border-0 p-0">
+                    <img class="card-img-top w-100" src="./assets/img/05-thumbnail.jpg" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">Projeto 5</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="card col-sm mx-sm-4 border-0 p-0">
+                    <img class="card-img-top w-100" src="./assets/img/06-thumbnail.jpg" alt="Imagem de capa do card">
+                    <div class="card-body">
+                        <h5 class="card-title">Projeto 6</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="text-center py-5 form-contato text-white bg-dark d-flex align-items-center" id="contato">
+        <div class="container">
+            <h4>Contato</h4>
+            <p class="font-italic">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+
+            <form>
+                <div class="row mt-5 mb-4">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nome">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="E-mail">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Telefone">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group col-6">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Mensagem"></textarea>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-warning text-white text-uppercase">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="container d-flex justify-content-between align-items-center my-4">
+        <small class="m-0">Copyright © Your Website 2019</small>
+        <div>
+            <a class="px-1" href="https://github.com/ninasolon"><img src="./assets/img/github.png" alt=""></a>
+            <a class="px-1" href="https://www.linkedin.com/in/nina-solon-31905bb6/"><img src="./assets/img/linkedin.png" alt=""></a>
+            <a class="px-1" href="https://www.facebook.com/nina.solon"><img src="./assets/img/facebook.jpg" alt=""></a>
+        </div>
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <small><a class="text-dark" href="#">Política de Privacidade</a></small>
+            </li>
+            <li class="list-inline-item">
+                <small><a class="text-dark" href="#">Termos de Uso</a></small>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="./assets/js/jquery.slim.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+</body>
+</html>
