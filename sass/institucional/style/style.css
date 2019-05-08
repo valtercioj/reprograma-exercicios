@@ -1,0 +1,14 @@
+.wrapper h2 {
+  font-size: 30px;
+  text-transform: unset;
+  color: #fff;
+}
+
+.wrapper button {
+  padding: 10px 20px;
+  background: gray;
+  text-transform: capitalize;
+  font-size: 16px;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */

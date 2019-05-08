@@ -1,0 +1,9 @@
+.wrapper {
+    h2 {
+        @include title(unset, $color-secondary);
+    }
+
+    button {
+        @include button(10px, 20px, gray, $color-secondary);
+    }
+}
