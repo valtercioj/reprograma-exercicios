@@ -2,31 +2,19 @@
     color: $color-primary;
     text-align: center;
 
-    .container {
-        @include container(40px);
+    .cards {
+        @include flex(flex-start, space-evenly);
+        margin-bottom: 50px;
 
-        h4 {
-            @include title(20px, uppercase, $color-title);
-        }
+        .card-feature {
+            width: 25%;
 
-        .cards {
-            @include flex(unset, space-evenly);
-            margin-bottom: 50px;
-
-            .card-feature {
-                @include flexDiv(25%);
-
-                h5 {
-                    @include title(14px, unset, $color-primary);
-                    font-weight: bold;
-                }
-
-                i {
-                    color: $color-icon;
-                    font-size: 45px;
-                    margin: 20px 0;
-                }
+            i {
+                color: $color-icon;
+                font-size: 45px;
+                margin: 20px 0;
             }
         }
     }
+
 }

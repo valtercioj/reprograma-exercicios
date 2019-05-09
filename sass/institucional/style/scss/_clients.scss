@@ -3,16 +3,7 @@
     color: $color-primary;
     text-align: center;
 
-    .container {
-        @include container(40px);
-
-        h4 {
-            @include title(20px, uppercase, $color-title);
-        }
-
-        ul li {
-            @extend %list;
-            padding-top: 40px;
-        }
+    .container li {
+        padding-top: 40px;
     }
 }

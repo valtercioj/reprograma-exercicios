@@ -1,29 +1,23 @@
 .description {
     color: $color-primary;
+    overflow: hidden;
 
     .container {
-        @include container(40px);
-        @include flex(center, space-between);
-        // position: relative;
+        @include flex(center, center);
 
         .description-text {
-            @include flexDiv(50%);
+            @extend %flexDiv;
 
-            h4 {
-                @include title(20px, uppercase, $color-title);
-            }
-
-            p {
-                margin-bottom: 20px;
-            }
+            p {margin-bottom: 20px;}
         }
 
-        img {
-            @include flexDiv(50%);
-            width: 400px;
-            // margin: 40px 0;
-            // position: absolute;
-            // right: -200px;
+        .description-img {
+            @extend %flexDiv;
+
+            img {
+                width: 800px;
+                margin-left: 80px;
+            }
         }
     }
 }

@@ -1,27 +1,28 @@
 .navbar {
-    background-color: transparent;
+    position: absolute;
+    width: 100%;
 
     .container {
-        @include container(10px);
         @include flex(center, space-between);
+        padding: 10px 0;
     }
 
     .nav-logo {
         @include flex(center, center);
-        @include link($color-secondary);
+        color: $color-secondary;
         font-weight: bold;
 
         img {
-            width: 40px;
-            margin-right: 5px;
+            width: 50px;
+            margin-right: 10px;
         }
     }
 
-    .nav-menu li {
-        @extend %list;
+    a {color: $color-bg-secondary;}
 
-        a {
-            @include link($color-bg-secondary);
-        }
+    p {
+        margin: 0;
+        width: 70px;
+        font-size: 16px;
     }
 }

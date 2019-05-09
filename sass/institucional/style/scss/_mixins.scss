@@ -4,25 +4,15 @@
     justify-content: $justify;
 }
 
-@mixin flexDiv($percent) {
-    width: $percent;
-}
-
-@mixin container($pd-y) {
-    margin: 0 auto;
-    width: 70%;
-    padding: $pd-y 0;
-}
-
 @mixin button($pd-y, $pd-x, $bg, $text) {
     padding: $pd-y $pd-x;
-    margin: 40px 10px;
     background: $bg;
+    color: $text;
+    margin: 40px 10px;
     border: none;
     border-radius: 5%;
     text-transform: capitalize;
     font-size: $font-size-text;
-    color: $text;
     cursor: pointer;
 }
 
@@ -32,9 +22,4 @@
     color: $color;
     margin: 20px 0;
     font-weight: normal;
-}
-
-@mixin link($color) {
-    text-decoration: none;
-    color: $color;
 }

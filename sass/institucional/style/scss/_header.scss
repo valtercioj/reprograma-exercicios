@@ -1,26 +1,26 @@
-header {
-    background-image: linear-gradient(#185359, #2C6C73, #185359);
-}
-
 .header {
+    background-image: linear-gradient(#185359, #2C6C73, #185359);
     color: $color-secondary;
+    top: 0; left: 0;
+    padding-top: 120px;
+    overflow: hidden;
 
     .container {
-        @include container(20px);
         @include flex(center, center);
     }
 
     .header-img {
-        @include flexDiv(50%);
+        @extend %flexDiv;
         text-align: center;
+
+        img {
+            height: 500px;
+            margin-bottom: -150px;
+        }
     } 
     
     .header-text {
-        @include flexDiv(50%);
-    }
-
-    h2 {
-        @include title(30px, unset, $color-secondary);
+        @extend %flexDiv;
     }
 
     .btn-apple {
@@ -33,7 +33,4 @@ header {
         font-size: 28px;
     }
 
-    img {
-        height: 400px;
-    }
 }

@@ -1,29 +1,72 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.header .header-img, .header .header-text, .description .container .description-text, .description .container .description-img {
+  width: 50%;
 }
 
 body {
+  margin: 0;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
 }
 
-.navbar .nav-menu li, .clients .container ul li, .footer .container ul li {
+a {
+  text-decoration: none;
+}
+
+li {
   list-style: none;
   display: inline-block;
-  padding: 0 10px;
+}
+
+li + li {
+  margin-left: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  text-transform: unset;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #000;
+  margin: 20px 0;
+  font-weight: normal;
+}
+
+h5 {
+  font-size: 14px;
+  text-transform: unset;
+  color: gray;
+  margin: 20px 0;
+  font-weight: normal;
+  font-weight: bold;
+}
+
+section {
+  padding: 30px 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 70%;
+}
+
+@media screen and (max-width: 420px) {
+  .container {
+    width: 90%;
+  }
 }
 
 .navbar {
-  background-color: transparent;
+  position: absolute;
+  width: 100%;
 }
 
 .navbar .container {
-  margin: 0 auto;
-  width: 70%;
-  padding: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,6 +76,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 10px 0;
 }
 
 .navbar .nav-logo {
@@ -45,34 +89,36 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-decoration: none;
   color: #fff;
   font-weight: bold;
 }
 
 .navbar .nav-logo img {
-  width: 40px;
-  margin-right: 5px;
+  width: 50px;
+  margin-right: 10px;
 }
 
-.navbar .nav-menu li a {
-  text-decoration: none;
+.navbar a {
   color: #e4e4e4;
 }
 
-header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#185359), color-stop(#2C6C73), to(#185359));
-  background-image: linear-gradient(#185359, #2C6C73, #185359);
+.navbar p {
+  margin: 0;
+  width: 70px;
+  font-size: 16px;
 }
 
 .header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#185359), color-stop(#2C6C73), to(#185359));
+  background-image: linear-gradient(#185359, #2C6C73, #185359);
   color: #fff;
+  top: 0;
+  left: 0;
+  padding-top: 120px;
+  overflow: hidden;
 }
 
 .header .container {
-  margin: 0 auto;
-  width: 70%;
-  padding: 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,50 +131,38 @@ header {
 }
 
 .header .header-img {
-  width: 50%;
   text-align: center;
 }
 
-.header .header-text {
-  width: 50%;
-}
-
-.header h2 {
-  font-size: 30px;
-  text-transform: unset;
-  color: #fff;
-  margin: 20px 0;
-  font-weight: normal;
+.header .header-img img {
+  height: 500px;
+  margin-bottom: -150px;
 }
 
 .header .btn-apple {
   padding: 10px 20px;
-  margin: 40px 10px;
   background: #fff;
+  color: gray;
+  margin: 40px 10px;
   border: none;
   border-radius: 5%;
   text-transform: capitalize;
   font-size: 14px;
-  color: gray;
   cursor: pointer;
   margin-left: 0;
 }
 
 .header .btn {
   padding: 0 0;
-  margin: 40px 10px;
   background: transparent;
+  color: #e4e4e4;
+  margin: 40px 10px;
   border: none;
   border-radius: 5%;
   text-transform: capitalize;
   font-size: 14px;
-  color: #e4e4e4;
   cursor: pointer;
   font-size: 28px;
-}
-
-.header img {
-  height: 400px;
 }
 
 .clients {
@@ -137,62 +171,34 @@ header {
   text-align: center;
 }
 
-.clients .container {
-  margin: 0 auto;
-  width: 70%;
-  padding: 40px 0;
-}
-
-.clients .container h4 {
-  font-size: 20px;
-  text-transform: uppercase;
-  color: #000;
-  margin: 20px 0;
-  font-weight: normal;
-}
-
-.clients .container ul li {
+.clients .container li {
   padding-top: 40px;
 }
 
 .description {
   color: gray;
+  overflow: hidden;
 }
 
 .description .container {
-  margin: 0 auto;
-  width: 70%;
-  padding: 40px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.description .container .description-text {
-  width: 50%;
-}
-
-.description .container .description-text h4 {
-  font-size: 20px;
-  text-transform: uppercase;
-  color: #000;
-  margin: 20px 0;
-  font-weight: normal;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .description .container .description-text p {
   margin-bottom: 20px;
 }
 
-.description .container img {
-  width: 50%;
-  width: 400px;
+.description .container .description-img img {
+  width: 800px;
+  margin-left: 80px;
 }
 
 .features {
@@ -200,47 +206,24 @@ header {
   text-align: center;
 }
 
-.features .container {
-  margin: 0 auto;
-  width: 70%;
-  padding: 40px 0;
-}
-
-.features .container h4 {
-  font-size: 20px;
-  text-transform: uppercase;
-  color: #000;
-  margin: 20px 0;
-  font-weight: normal;
-}
-
-.features .container .cards {
+.features .cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: unset;
-      -ms-flex-align: unset;
-          align-items: unset;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   margin-bottom: 50px;
 }
 
-.features .container .cards .card-feature {
+.features .cards .card-feature {
   width: 25%;
 }
 
-.features .container .cards .card-feature h5 {
-  font-size: 14px;
-  text-transform: unset;
-  color: gray;
-  margin: 20px 0;
-  font-weight: normal;
-  font-weight: bold;
-}
-
-.features .container .cards .card-feature i {
+.features .cards .card-feature i {
   color: #5da09c;
   font-size: 45px;
   margin: 20px 0;
@@ -252,9 +235,6 @@ header {
 }
 
 .footer .container {
-  margin: 0 auto;
-  width: 70%;
-  padding: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -267,7 +247,6 @@ header {
 }
 
 .footer .container a {
-  text-decoration: none;
   color: #e4e4e4;
 }
 
