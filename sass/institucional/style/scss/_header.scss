@@ -1,9 +1,39 @@
-.wrapper {
-    h2 {
-        @include title(unset, $color-secondary);
+header {
+    background-image: linear-gradient(#185359, #2C6C73, #185359);
+}
+
+.header {
+    color: $color-secondary;
+
+    .container {
+        @include container(20px);
+        @include flex(center, center);
     }
 
-    button {
-        @include button(10px, 20px, gray, $color-secondary);
+    .header-img {
+        @include flexDiv(50%);
+        text-align: center;
+    } 
+    
+    .header-text {
+        @include flexDiv(50%);
+    }
+
+    h2 {
+        @include title(30px, unset, $color-secondary);
+    }
+
+    .btn-apple {
+        @include button(10px, 20px, $color-secondary, $color-primary);
+        margin-left: 0;
+    }
+
+    .btn {
+        @include button(0, 0, transparent, $color-bg-secondary);
+        font-size: 28px;
+    }
+
+    img {
+        height: 400px;
     }
 }

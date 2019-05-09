@@ -1,0 +1,27 @@
+.navbar {
+    background-color: transparent;
+
+    .container {
+        @include container(10px);
+        @include flex(center, space-between);
+    }
+
+    .nav-logo {
+        @include flex(center, center);
+        @include link($color-secondary);
+        font-weight: bold;
+
+        img {
+            width: 40px;
+            margin-right: 5px;
+        }
+    }
+
+    .nav-menu li {
+        @extend %list;
+
+        a {
+            @include link($color-bg-secondary);
+        }
+    }
+}

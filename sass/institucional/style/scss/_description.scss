@@ -1,0 +1,29 @@
+.description {
+    color: $color-primary;
+
+    .container {
+        @include container(40px);
+        @include flex(center, space-between);
+        // position: relative;
+
+        .description-text {
+            @include flexDiv(50%);
+
+            h4 {
+                @include title(20px, uppercase, $color-title);
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+        }
+
+        img {
+            @include flexDiv(50%);
+            width: 400px;
+            // margin: 40px 0;
+            // position: absolute;
+            // right: -200px;
+        }
+    }
+}

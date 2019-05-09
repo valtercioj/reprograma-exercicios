@@ -1,6 +1,13 @@
 // base
 @import 'scss/variables';
+@import 'scss/body';
+@import 'scss/extend';
 @import 'scss/mixins';
 
 // componentes
+@import 'scss/nav';
 @import 'scss/header';
+@import 'scss/clients';
+@import 'scss/description';
+@import 'scss/features';
+@import 'scss/footer';

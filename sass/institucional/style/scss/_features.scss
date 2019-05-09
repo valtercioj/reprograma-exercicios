@@ -1,0 +1,32 @@
+.features {
+    color: $color-primary;
+    text-align: center;
+
+    .container {
+        @include container(40px);
+
+        h4 {
+            @include title(20px, uppercase, $color-title);
+        }
+
+        .cards {
+            @include flex(unset, space-evenly);
+            margin-bottom: 50px;
+
+            .card-feature {
+                @include flexDiv(25%);
+
+                h5 {
+                    @include title(14px, unset, $color-primary);
+                    font-weight: bold;
+                }
+
+                i {
+                    color: $color-icon;
+                    font-size: 45px;
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+}

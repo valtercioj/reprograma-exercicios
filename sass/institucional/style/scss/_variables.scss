@@ -1,15 +1,15 @@
 //color
 $black: #000;
 $white: #fff;
-$gray: #ccc;
+$lightGray: rgb(228, 228, 228);
+$gray: gray;
 $blue: #5da09c;
 
-$color-primary: $black;
+$color-primary: $gray;
 $color-secondary: $white;
 $color-icon: $blue;
-$color-bg: $gray;
+$color-bg-secondary: $lightGray;
+$color-title: $black;
 
 //size
-$padding: 40px;
-$font-size-text: 16px;
-$font-size-title: 30px;
+$font-size-text: 14px;

@@ -1,0 +1,22 @@
+.footer {
+    background-color: $color-primary;
+    color: $color-bg-secondary;
+
+    .container {
+        @include container(10px);
+        @include flex(center, space-between);
+
+        a {
+            @include link($color-bg-secondary);
+        }
+
+        ul li {
+            @extend %list;
+        }
+
+        i {
+            font-size: 24px;
+            padding: 0 5px;
+        }
+    }
+}

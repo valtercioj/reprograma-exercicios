@@ -1,14 +1,278 @@
-.wrapper h2 {
-  font-size: 30px;
-  text-transform: unset;
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+.navbar .nav-menu li, .clients .container ul li, .footer .container ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.navbar {
+  background-color: transparent;
+}
+
+.navbar .container {
+  margin: 0 auto;
+  width: 70%;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar .nav-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar .nav-logo img {
+  width: 40px;
+  margin-right: 5px;
+}
+
+.navbar .nav-menu li a {
+  text-decoration: none;
+  color: #e4e4e4;
+}
+
+header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#185359), color-stop(#2C6C73), to(#185359));
+  background-image: linear-gradient(#185359, #2C6C73, #185359);
+}
+
+.header {
   color: #fff;
 }
 
-.wrapper button {
-  padding: 10px 20px;
-  background: gray;
-  text-transform: capitalize;
-  font-size: 16px;
+.header .container {
+  margin: 0 auto;
+  width: 70%;
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .header-img {
+  width: 50%;
+  text-align: center;
+}
+
+.header .header-text {
+  width: 50%;
+}
+
+.header h2 {
+  font-size: 30px;
+  text-transform: unset;
   color: #fff;
+  margin: 20px 0;
+  font-weight: normal;
+}
+
+.header .btn-apple {
+  padding: 10px 20px;
+  margin: 40px 10px;
+  background: #fff;
+  border: none;
+  border-radius: 5%;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: gray;
+  cursor: pointer;
+  margin-left: 0;
+}
+
+.header .btn {
+  padding: 0 0;
+  margin: 40px 10px;
+  background: transparent;
+  border: none;
+  border-radius: 5%;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: #e4e4e4;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.header img {
+  height: 400px;
+}
+
+.clients {
+  background-color: #e4e4e4;
+  color: gray;
+  text-align: center;
+}
+
+.clients .container {
+  margin: 0 auto;
+  width: 70%;
+  padding: 40px 0;
+}
+
+.clients .container h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #000;
+  margin: 20px 0;
+  font-weight: normal;
+}
+
+.clients .container ul li {
+  padding-top: 40px;
+}
+
+.description {
+  color: gray;
+}
+
+.description .container {
+  margin: 0 auto;
+  width: 70%;
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.description .container .description-text {
+  width: 50%;
+}
+
+.description .container .description-text h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #000;
+  margin: 20px 0;
+  font-weight: normal;
+}
+
+.description .container .description-text p {
+  margin-bottom: 20px;
+}
+
+.description .container img {
+  width: 50%;
+  width: 400px;
+}
+
+.features {
+  color: gray;
+  text-align: center;
+}
+
+.features .container {
+  margin: 0 auto;
+  width: 70%;
+  padding: 40px 0;
+}
+
+.features .container h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #000;
+  margin: 20px 0;
+  font-weight: normal;
+}
+
+.features .container .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+.features .container .cards .card-feature {
+  width: 25%;
+}
+
+.features .container .cards .card-feature h5 {
+  font-size: 14px;
+  text-transform: unset;
+  color: gray;
+  margin: 20px 0;
+  font-weight: normal;
+  font-weight: bold;
+}
+
+.features .container .cards .card-feature i {
+  color: #5da09c;
+  font-size: 45px;
+  margin: 20px 0;
+}
+
+.footer {
+  background-color: gray;
+  color: #e4e4e4;
+}
+
+.footer .container {
+  margin: 0 auto;
+  width: 70%;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .container a {
+  text-decoration: none;
+  color: #e4e4e4;
+}
+
+.footer .container i {
+  font-size: 24px;
+  padding: 0 5px;
 }
 /*# sourceMappingURL=style.css.map */

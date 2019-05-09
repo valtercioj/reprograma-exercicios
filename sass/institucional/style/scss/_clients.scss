@@ -1,0 +1,18 @@
+.clients {
+    background-color: $color-bg-secondary;
+    color: $color-primary;
+    text-align: center;
+
+    .container {
+        @include container(40px);
+
+        h4 {
+            @include title(20px, uppercase, $color-title);
+        }
+
+        ul li {
+            @extend %list;
+            padding-top: 40px;
+        }
+    }
+}
