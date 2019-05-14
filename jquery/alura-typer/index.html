@@ -5,23 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reprograma Typer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h1>Reprograma Typer</h1>
-    <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    <p class="orig-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
     <ul>
-        <li><span class="words"></span> palavras</li>
+        <li><span class="word-count"></span> palavras</li>
         <li><span class="time">10</span> segundos</li>
     </ul>
-    <textarea class="input" cols="40" rows="8"></textarea>
-    <p class="typed"></p>
-    <ul>
-        <li><span class="character-typed"></span> caracteres</li>
-        <li><span class="words-typed"></span> palavras</li>
+    <textarea class="input" cols="90" rows="6"></textarea>
+    <button class="restart"><i class="fas fa-redo"></i></button>
+    <p class="typed-text"></p>
+    <ul class="count">
+        <li><span class="typed-characters">0</span> caracteres</li>
+        <li><span class="typed-words">0</span> palavras</li>
     </ul>
-
+    <div>
+        <h2>Placar</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Usuário</th>
+                    <th>Qtd. Palavras</th>
+                    <th>Remover</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
