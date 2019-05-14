@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery - Reprograma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <input type="password" name="senha" id="senha" />
+
+    <br>
+    <br>
+
+    <div id="forca">Força: </div>
+
+    <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+    <script>
+
+        $(document).ready(function() {
+            $('#senha').keyup(function(){
+                let senha = $(this).val();
+                let valor = 0;
+
+                if(senha.length > 4){
+                    valor += 25;
+                }
+
+                let regNumero = new RegExp(/[0-9]/i);
+                let regCaractere = new RegExp(/[a-z]/i);
+                let regCaractereEspecial = new RegExp(/[^a-z0-9]/i);
+
+                if(regNumero.test(senha)){
+                    valor += 25;
+                }
+
+                if(regCaractere.test(senha)){
+                    valor += 25;
+                }
+
+                if(regCaractereEspecial.test(senha)){
+                    valor += 25;
+                }
+
+                // let forca = "Senha fraca";
+
+                //CSS inline, não recomendado
+
+                    // if (valor==0) {
+                    //     $(this).css("background-color", "white");
+                    // }
+
+                    // else if(valor>=75){
+                    //     forca = "Senha forte";
+                    //     $(this).css("background-color", "lightgreen");
+                    // }
+
+                    // else{
+                    //     $(this).css("background-color", "lightcoral");
+                    // }
+
+                //CSS externo
+
+                    // if (valor==0) {
+                    //     forca = "";
+                    //     $(this).removeClass("fundoVerde");
+                    //     $(this).removeClass("fundoRosa");
+                    // }
+
+                    // else if(valor>=75){
+                    //     forca = "Senha forte";
+                    //     $(this).removeClass("fundoRosa");
+                    //     $(this).addClass("fundoVerde");
+                    // }
+
+                    // else {
+                    //     $(this).removeClass("fundoVerde");
+                    //     $(this).addClass("fundoRosa");
+                    // }
+
+                //toggleClass
+                
+                let aceito = (valor >=75);
+
+                if (valor>0) {
+                
+                $(this).toggleClass('fundoVerde', aceito);
+                $(this).toggleClass('fundoRosa', !aceito);
+                }
+
+                else {
+                    $(this).removeClass('fundoVerde', !aceito);
+                    $(this).removeClass('fundoRosa', !aceito);
+                }
+
+                $('#forca').html(`Força: ${valor} <br> Senha: ${senha} <br> Aceito: ${aceito?"Sim":"Não"}`); //if ternário
+            })
+        });
+
+    </script>
+</body>
+
+</html>
