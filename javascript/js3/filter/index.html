@@ -17,6 +17,7 @@
             <div class="search">
                 <input type="text" onkeyup="limpar(this.value)"/>
                 <button id="botaoPesquisar">Pesquisar</button>
+                <button onclick="botaoOrdenar()">Ordenar</button>
             </div>
             <!-- Boxes -->
             <div class="thumbnails">
@@ -61,42 +62,50 @@
 <script>
     let fotografias = [
         {
+            posicao: '04',
             url: 'https://github.com/reprograma',
             imagem: 'images/pic01.jpg',
             titulo: 'Taxi na cidade',
             descricao: 'Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.'
         },
         {
+            posicao: '06',
             url: 'https://github.com/reprograma',
             imagem: 'images/pic02.jpg',
             titulo: 'Homem andando de skate à noite',
             descricao: 'Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.'
         },
         {
+            posicao: '01',
             url: 'https://github.com/reprograma',
             imagem: 'images/pic03.jpg',
             titulo: 'Cidade à noite',
             descricao: 'Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.'
         },
         {
+            posicao: '03',
             url: 'https://github.com/reprograma',
             imagem: 'images/pic04.jpg',
             titulo: 'Mulher na frente de grafite',
             descricao: 'Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.'
         },
         {
+            posicao: '02',
             url: 'https://github.com/reprograma',
             imagem: 'images/pic05.jpg',
             titulo: 'Homem de costas à noite',
             descricao: 'Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.'
         },
         {
+            posicao: '05',
             url: 'https://youtu.be/s6zR2T9vn2c',
             imagem: 'images/pic06.jpg',
             titulo: 'Tênis na cidade',
             descricao: 'Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.'
         },
     ]
+
+    var cards = document.querySelector('.thumbnails');
 
     var createCard = (data) => {
         return data.map((item) => {
@@ -115,7 +124,7 @@
         }).join('');
     }
 
-    document.querySelector('.thumbnails').innerHTML += createCard(fotografias);
+    cards.innerHTML += createCard(fotografias);
 
     var botao = document.getElementById('botaoPesquisar');
     
@@ -126,13 +135,20 @@
             return item.titulo.toLowerCase().includes(palavraBusca)
         }); //criou um novo array com o filtro da busca
 
-        document.querySelector('.thumbnails').innerHTML = createCard(filtro);
+        cards.innerHTML = createCard(filtro);
     });
 
     var limpar = (value) => {
         if(!value) {
-            document.querySelector('.thumbnails').innerHTML = createCard(fotografias);
+            cards.innerHTML = createCard(fotografias);
         }
+    }
+
+    var botaoOrdenar = () => {
+        var ordenar = fotografias.sort((anterior, atual) => {
+            return anterior.posicao < atual.posicao ? -1 : 0
+        });
+        cards.innerHTML = createCard(ordenar);
     }
 
 </script>
