@@ -46,6 +46,16 @@ li {
   max-width: 960px;
 }
 
+/* input busca */
+.busca {
+  display: block;
+  width: 300px;
+  margin: 20px auto;
+  font-size: 16px;
+  padding: 5px;
+  text-align: center;
+}
+
 /* --- BOTAO --- */
 
 .btn {
@@ -201,13 +211,17 @@ li {
 }
 
 .maravilhosas__perfil {
-  max-width: 120px;
+  /* max-width: 120px; */
   margin: 2rem;
 }
 
 .maravilhosas__perfil img {
   background-color: #63458a;
   border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
 }
 
 .maravilhosas__perfil a img {

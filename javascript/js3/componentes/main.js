@@ -74,6 +74,8 @@ var createMain = () => {
     return (
         `<section class="maravilhosas container" id="mulheres-maravilhosas">
             <h3 class="maravilhosas__titulo">Veja todas as mulheres homenageadas nesse projeto!</h3>
+            <input type="text" class="busca" onkeyup="limpar(this.value)">
+            <button class="btn btn_roxo" id="btnMain">Buscar</button>
             <div class="maravilhosas__box"></div>
         </section>`
     )
@@ -129,6 +131,22 @@ var createMaravilhosas = (data) => {
 
 document.querySelector('.maravilhosas__box').innerHTML += createMaravilhosas(maravilhosas);
 
+document.querySelector('#btnMain').addEventListener ('click', function() {
+    var palavraBusca = document.querySelector('.busca').value.toLocaleLowerCase();
+
+    var filtro = maravilhosas.filter((item) => {
+        return item.nome.toLocaleLowerCase().includes(palavraBusca)
+    });
+
+    document.querySelector('.maravilhosas__box').innerHTML = createMaravilhosas(filtro);
+})
+
+function limpar(value) {
+    if(!value){
+        document.querySelector('.maravilhosas__box').innerHTML = createMaravilhosas(maravilhosas);
+    }
+}
+
 var createFooter = () => {
     return (
         `<div class="rodape__principal">
@@ -157,3 +175,18 @@ var createFooter = () => {
 }
 
 document.querySelector('.rodape').innerHTML = createFooter();
+
+maravilhosas.push(
+    {
+        nome: 'Nina',
+        src: 'personalidade/beyonce/img/beyonce.jpg',
+        link: 'personalidade/beyonce/index.html'
+    },
+    {
+        nome: 'Raissa',
+        src: 'personalidade/beyonce/img/beyonce.jpg',
+        link: 'personalidade/beyonce/index.html'
+    },
+)
+
+document.querySelector('.maravilhosas__box').innerHTML = createMaravilhosas(maravilhosas);
