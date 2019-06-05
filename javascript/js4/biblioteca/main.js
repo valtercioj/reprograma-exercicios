@@ -39,6 +39,8 @@ const ordenarListaZA = (livroA, livroB, propriedade) => {
 const listarLivros = document.getElementById('listarLivros')
 listarLivros.addEventListener('click', () => {
     filtroLista('Livros')
+
+    document.getElementById('filtroGenero').innerHTML = ''
     
     document.getElementById('lista').innerHTML = mostrarLista(livros, 'livro') 
 
@@ -57,6 +59,8 @@ const listarAutores = document.getElementById('listarAutores')
 listarAutores.addEventListener('click', () => {
     filtroLista('Autores')
 
+    document.getElementById('filtroGenero').innerHTML = ''
+
     document.getElementById('lista').innerHTML = mostrarLista(livros, 'autor')
 
     document.querySelector('.btnOrdenarAZ').addEventListener ('click', () => {
@@ -72,23 +76,53 @@ listarAutores.addEventListener('click', () => {
 
 const listarGeneros = document.getElementById('listarGeneros')
 listarGeneros.addEventListener('click', () => {
-    filtroLista('Gêneros')
+    document.getElementById('lista').innerHTML = ''
 
-    document.getElementById('lista').innerHTML = mostrarLista(livros, 'genero') 
+    document.getElementById('filtroLista').textContent = 'Gêneros disponíveis'
 
-    document.querySelector('.btnOrdenarAZ').addEventListener ('click', () => {
-        const listaOrdenada = livros.sort((livroA, livroB) => ordenarListaAZ(livroA, livroB, 'genero'))
-        document.getElementById('lista').innerHTML = mostrarLista(listaOrdenada, 'genero')
-    })
+    const generos = [...new Set(livros.map(x => x.genero))]
 
-    document.querySelector('.btnOrdenarZA').addEventListener ('click', () => {
-        const listaOrdenada = livros.sort((livroA, livroB) => ordenarListaZA(livroA, livroB, 'genero'))
-        document.getElementById('lista').innerHTML = mostrarLista(listaOrdenada, 'genero')
+    const ordenarGenero = (gen1, gen2) => {
+        if (gen1.toLowerCase() < gen2.toLowerCase()){
+            return -1
+        } if (gen1.toLowerCase() > gen2.toLowerCase()){
+            return 1
+        } 
+        return 0
+    };
+
+    const generoOrdenado = generos.sort((gen1, gen2) => ordenarGenero(gen1, gen2))
+
+    const mostrarGeneros = (data) => {
+        return data.map((item) => {
+            return (
+                `<label><input type="radio" name="genero" value="${item}">${item}</label>`
+            )
+        }).join('');
+    }
+
+    document.getElementById('filtroGenero').innerHTML = `${mostrarGeneros(generoOrdenado)}<br><button id='btnFiltroGenero'>Filtrar</button>`;
+
+    document.getElementById('btnFiltroGenero').addEventListener('click', () => {
+        let qtdGenero = document.querySelectorAll("input:checked").length;
+
+        let buscaGenero = document.querySelectorAll("input:checked").value;
+
+        console.log(buscaGenero)
+        if (qtdGenero == 0){
+            document.getElementById('lista').innerHTML = ''
+        } else {
+            // let filtroGenero = livros.filter ((item) => {
+            //     return item.genero == buscaGenero
+            // })
+            document.getElementById('lista').innerHTML = 'quase lá'
+        }
     })
 })
 
 const limparLista = document.getElementById('limparLista')
 limparLista.addEventListener('click', () => {
     document.getElementById('filtroLista').innerHTML = ''
+    document.getElementById('filtroGenero').innerHTML = ''
     document.getElementById('lista').innerHTML = ''
 })

@@ -4,92 +4,92 @@ const biblioteca = {
     {
       "autor":"George R. R. Martin",
       "livro": "Fogo e Sangue",
-      "genero":"fantasia"
+      "genero":"Fantasia"
     },
     {
       "autor": "Machado de Assis",
       "livro":"Memórias Póstumas de Brás Cubas",
-      "genero":"literatura"
+      "genero":"Literatura"
     },
     {
       "livro":"Capitães da Areia",
       "autor": "Jorge Amado",
-      "genero":"literatura"
+      "genero":"Literatura"
     },
     {
       "autor":"Graciliano Ramos",
       "livro": "Vidas Secas",
-      "genero":"literatura"
+      "genero":"Literatura"
     },
     {
       "autor":"Lauren Kate",
       "livro": "Fallen",
-      "genero":"fantasia"
+      "genero":"Fantasia"
     },
     {
       "autor":"Antony Beevor",
       "livro": "A Segunda Guerra Mundial",
-      "genero":"guerra"
+      "genero":"Guerra"
     },
     {
       "autor":"Clarice Lispector",
       "livro": "A Hora da Estrela",
-      "genero":"literatura"
+      "genero":"Literatura"
     },
     {
       "autor":"Richard J. Evans",
       "livro": "A Chegada do Terceiro Reich",
-      "genero":"guerra"
+      "genero":"Guerra"
     },
     {
       "autor":"Lygia Fagundes Telles",
       "livro": "Os Contos",
-      "genero":"contos"
+      "genero":"Contos"
     },
     {
       "autor":"Tiago Ferro",
       "livro": "O Pai da Menina Morta",
-      "genero":"drama"
+      "genero":"Drama"
     },
     {
       "autor":"Maria Valéria Rezende ",
       "livro": "A Face Serena ",
-      "genero":"drama"
+      "genero":"Drama"
     },
     {
       "autor":"Kristen Roupenian",
       "livro": "Cat Person e Outros Contos",
-      "genero":"contos"
+      "genero":"Contos"
     },
     {
       "autor":"Maurício de Sousa",
       "livro": "Turma da Mônica",
-      "genero":"aventura"
+      "genero":"Aventura"
     },
     {
       "autor":"Martha Hall Kelly",
       "livro": "Mulheres sem Nome",
-      "genero":"romance"
+      "genero":"Romance"
     },
     {
       "autor":"Madeleine L'engle",
       "livro": "Uma Dobra no Tempo",
-      "genero":"mistério"
+      "genero":"Mistério"
     },
     {
       "autor":"Krysten Ritter",
       "livro": "A Fogueira",
-      "genero":"fantasia"
+      "genero":"Fantasia"
     },
     {
       "autor":"Angela Davis",
       "livro": "Mulheres, Cultura e Política",
-      "genero":"política"
+      "genero":"Política"
     },
     {
       "autor":"Ruth Ware",
       "livro": "A Mulher na Cabine 10",
-      "genero":"mistério"
+      "genero":"Mistério"
     }
   ]
 }
