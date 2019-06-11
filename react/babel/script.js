@@ -1,7 +1,7 @@
 const app = document.getElementById('app')
 
 const a = 'segunda-feira'
-const template = <h1>React na Reprograma, na {a}</h1> // variável declarada em JSX, sintaxe do react que não é lida pelo navegador e precisa ser compilada com babel da seguinte forma:
+const template = <h1>React na Reprograma, na {a}</h1> // variável declarada em JSX, sintaxe que não é lida pelo navegador e precisa ser compilada com babel para react da seguinte forma:
 
 // const template = React.createElement("h1", null, "React na Reprograma, na ", a);  
 

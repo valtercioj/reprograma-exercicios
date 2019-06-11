@@ -2,7 +2,7 @@
 
 var app = document.getElementById('app');
 var a = 'segunda-feira';
-var template = React.createElement("h1", null, "React na Reprograma, na ", a); // variável declarada em JSX, sintaxe do react que não é lida pelo navegador e precisa ser compilada com babel da seguinte forma:
+var template = React.createElement("h1", null, "React na Reprograma, na ", a); // variável declarada em JSX, sintaxe que não é lida pelo navegador e precisa ser compilada com babel para react da seguinte forma:
 // const template = React.createElement("h1", null, "React na Reprograma, na ", a);  
 
 ReactDOM.render(template, app); //render é um método do ReactDOM com dois parâmetros (elemento, container), o que eu quero renderizar e onde eu quero fazer isso 
