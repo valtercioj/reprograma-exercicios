@@ -3,25 +3,76 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
+// class Previsao extends React.Component{
+//     render(){
+//         return(
+//             <div className="previsao">
+//                 <h2 className="previsao__data">{this.props.data}</h2>
+//                 <p className="previsao__resumo">{this.props.resumo}</p>
+//                 <img className="previsao__img" src={this.props.img} alt="Imagem referente à previsão do tempo"/>
+//                 <table className="previsao-temperatura">
+//                     <tr className="previsao-temperatura__linha">
+//                         <th>Máxima</th>
+//                         <td>{this.props.temperatura.max}°C</td>
+//                     </tr>
+//                     <tr className="previsao-temperatura__linha">
+//                         <th>Mínima</th>
+//                         <td>{this.props.temperatura.min}°C</td>
+//                     </tr>
+//                 </table>
+//             </div>
+//         )
+//     }
+// }
+
+//criando componentes dentro de componentes:
+
+//componentes funcionais recebem 'props' no parâmetro não precisam do 'this'
+const Titulo = (props) => {
+    return(
+        <div>
+            <h2 className="previsao__data">{props.data}</h2>
+            <p className="previsao__resumo">{props.resumo}</p>
+        </div>
+    )
+}
+
+const Imagem = (props) => {
+    return(
+        <img className="previsao__img" src={props.img} alt="Imagem referente à previsão do tempo"/>
+    )
+}
+
+const Temperatura = (props) => {
+    return(
+        <table className="previsao-temperatura">
+            <tr className="previsao-temperatura__linha">
+                <th>Máxima</th>
+                <td>{props.temperatura.max}°C</td>
+            </tr>
+            <tr className="previsao-temperatura__linha">
+                <th>Mínima</th>
+                <td>{props.temperatura.min}°C</td>
+            </tr>
+        </table>
+    )
+}
+
+//componentes de classe precisam do 'this' antes do 'props' (não declaramos o parâmetro)
 class Previsao extends React.Component{
     render(){
         return(
             <div className="previsao">
-                <h2 className="previsao__data">{this.props.data}</h2>
-                <h3 className="previsao__resumo">{this.props.resumo}</h3>
-                <img className="previsao__img" src={this.props.img} alt="Imagem referente à previsão do tempo"/>
-                <table className="previsao-temperatura">
-                    <tbody>
-                        <tr className="previsao-temperatura__linha">
-                            <th>Máxima</th>
-                            <td>{this.props.temperatura.max}°C</td>
-                        </tr>
-                        <tr className="previsao-temperatura__linha">
-                            <th>Mínima</th>
-                            <td>{this.props.temperatura.min}°C</td>
-                        </tr>
-                    </tbody>
-                </table>
+                < Titulo
+                    data={this.props.data}
+                    resumo={this.props.resumo}
+                />
+                < Imagem 
+                    img={this.props.img}
+                />
+                < Temperatura 
+                    temperatura={this.props.temperatura}
+                />
             </div>
         )
     }

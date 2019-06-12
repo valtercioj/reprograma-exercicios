@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-let contadorNum = 0
+// let contadorNum = 0
 
 // const nome = {
 //     primeiroNome: "Nina",
@@ -58,30 +58,50 @@ let contadorNum = 0
 // }, 2000)
 
 class Contador extends React.Component {
-    //para adicionar eventos na classe, precisamos criar métodos dentro dela
+
+    //constructor não é um método obrigatório. quando não chamamos, ele é chamado sozinho com valores padrão. para adicionar outros valores, como o state, precisamos chamá-lo
+    constructor(props){
+        super(props);
+        this.state = { 
+            contadorNum: 0
+        }
+        this.somaUm = this.somaUm.bind(this)
+        this.subtraiUm = this.subtraiUm.bind(this)
+        this.resetCount = this.resetCount.bind(this)
+    }
     
+    //para adicionar eventos na classe, precisamos criar métodos dentro dela
     somaUm = () => {
-        contadorNum++
-        console.log(contadorNum)
-        ReactDOM.render(< Contador />, document.getElementById('root')) 
+
+        //state é um objeto, por isso precisamos de um método para atualizar seu valor:
+        this.setState((prevState) => {
+            return {
+                contadorNum: prevState.contadorNum + 1
+            }
+        })
+        // ReactDOM.render(< Contador />, document.getElementById('root')) - substituído pelo state
     }
 
     subtraiUm = () => {
-        contadorNum--
-        console.log(contadorNum)
-        ReactDOM.render(< Contador />, document.getElementById('root')) 
+        this.setState((prevState) => {
+            return {
+                contadorNum: prevState.contadorNum - 1
+            }
+        })
     }
 
     resetCount = () => {
-        contadorNum = 0
-        console.log(contadorNum)
-        ReactDOM.render(< Contador />, document.getElementById('root')) 
+        this.setState((prevState) => {
+            return {
+                contadorNum: 0
+            }
+        })
     }
 
     render() {
         return (
             <div>
-                <h2>Count: {contadorNum}</h2>
+                <h2>Count: {this.state.contadorNum}</h2>
                 <div>
                     <button onClick={this.somaUm}>+1</button>
                     <button onClick={this.subtraiUm}>-1</button>
