@@ -3,22 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-class Card extends React.Component{
+class Previsao extends React.Component{
     render(){
         return(
             <div className="previsao">
-                <h1 className="previsao__data">{this.props.data}</h1>
-                <h2 className="previsao__resumo">{this.props.resumo}</h2>
-                <img className="previsao__img" src={this.props.img}/>
+                <h2 className="previsao__data">{this.props.data}</h2>
+                <h3 className="previsao__resumo">{this.props.resumo}</h3>
+                <img className="previsao__img" src={this.props.img} alt="Imagem referente à previsão do tempo"/>
                 <table className="previsao-temperatura">
+                    <tbody>
                         <tr className="previsao-temperatura__linha">
                             <th>Máxima</th>
-                            <td>{this.props.temperaturaMax}°C</td>
+                            <td>{this.props.temperatura.max}°C</td>
                         </tr>
                         <tr className="previsao-temperatura__linha">
                             <th>Mínima</th>
-                            <td>{this.props.temperaturaMin}°C</td>
+                            <td>{this.props.temperatura.min}°C</td>
                         </tr>
+                    </tbody>
                 </table>
             </div>
         )
@@ -45,30 +47,28 @@ const previsao01_06 = {
     }
 }
 
-class App extends React.Component{
+class Container extends React.Component{
     render(){
         return(
             <div className="previsao-container">
-                < Card
+                < Previsao
                     data={previsao31_05.data}
                     resumo={previsao31_05.resumo}
                     img={previsao31_05.imagem}
-                    temperaturaMax={previsao31_05.temperatura.max}
-                    temperaturaMin={previsao31_05.temperatura.min}
+                    temperatura={previsao31_05.temperatura}
                 />
-                < Card
+                < Previsao
                     data={previsao01_06.data}
                     resumo={previsao01_06.resumo}
                     img={previsao01_06.imagem}
-                    temperaturaMax={previsao01_06.temperatura.max}
-                    temperaturaMin={previsao01_06.temperatura.min}
+                    temperatura={previsao01_06.temperatura}
                 />
             </div>
         )
     }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Container />, document.getElementById('root'));
 
 
 // If you want your app to work offline and load faster, you can change

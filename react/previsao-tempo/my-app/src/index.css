@@ -24,8 +24,9 @@ code {
   border-radius: 10px;
   background-color: #f3f3f3;
   padding: 25px;
-  max-width: 200px;
+  width: 150px;
   text-align: center;
+  margin-top: 50px;
 }
 
 .previsao__data {
