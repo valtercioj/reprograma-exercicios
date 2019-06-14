@@ -78,48 +78,58 @@ class Previsao extends React.Component{
     }
 }
 
-const previsao31_05 = {
-    data: '31/05/2019',
-    resumo: 'Ensolarado',
-    imagem: 'https://www.onlygfx.com/wp-content/uploads/2018/09/4-clipart-sun-1.png',
-    temperatura: {
-      max: 31,
-      min: 20
+//puxando info de um array de objetos:
+const arrayDatas = [
+    {
+        data: '31/05/2019',
+        resumo: 'Ensolarado',
+        imagem: 'https://www.onlygfx.com/wp-content/uploads/2018/09/4-clipart-sun-1.png',
+        temperatura: {
+          max: 31,
+          min: 20
+        },
+    },
+    {
+        data: '01/06/2019',
+        resumo: 'Nublado',
+        imagem: 'https://cdn.pixabay.com/photo/2013/04/01/09/22/clouds-98536_960_720.png',
+        temperatura: {
+          max: 25,
+          min: 18
+        }
+    },
+    {
+        data: '02/06/2019',
+        resumo: 'Tempestade',
+        imagem: 'https://cdn.pixabay.com/photo/2013/04/01/09/22/clouds-98536_960_720.png',
+        temperatura: {
+          max: 19,
+          min: 13
+        }
     }
-}
-   
-const previsao01_06 = {
-    data: '01/06/2019',
-    resumo: 'Nublado',
-    imagem: 'https://cdn.pixabay.com/photo/2013/04/01/09/22/clouds-98536_960_720.png',
-    temperatura: {
-      max: 25,
-      min: 18
-    }
-}
+]
 
 class Container extends React.Component{
     render(){
         return(
             <div className="previsao-container">
-                < Previsao
-                    data={previsao31_05.data}
-                    resumo={previsao31_05.resumo}
-                    img={previsao31_05.imagem}
-                    temperatura={previsao31_05.temperatura}
-                />
-                < Previsao
-                    data={previsao01_06.data}
-                    resumo={previsao01_06.resumo}
-                    img={previsao01_06.imagem}
-                    temperatura={previsao01_06.temperatura}
-                />
+                {this.props.previsao.map((item) => {
+                    return (
+                        < Previsao
+                            data={item.data}
+                            resumo={item.resumo}
+                            img={item.imagem}
+                            temperatura={item.temperatura}
+                        />
+                    )
+                })}
             </div>
         )
     }
 }
 
-ReactDOM.render(<Container />, document.getElementById('root'));
+//declaramos o array de objetos como propriedade do componente e chamamos através de props, no método map (acima)
+ReactDOM.render(<Container previsao={arrayDatas}/>, document.getElementById('root'));
 
 
 // If you want your app to work offline and load faster, you can change
