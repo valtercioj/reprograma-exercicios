@@ -65,9 +65,9 @@ class Contador extends React.Component {
         this.state = { 
             contadorNum: 0
         }
-        this.somaUm = this.somaUm.bind(this)
-        this.subtraiUm = this.subtraiUm.bind(this)
-        this.resetCount = this.resetCount.bind(this)
+        // this.somaUm = this.somaUm.bind(this)
+        // this.subtraiUm = this.subtraiUm.bind(this)
+        // this.resetCount = this.resetCount.bind(this)
     }
     
     //para adicionar eventos na classe, precisamos criar métodos dentro dela
@@ -91,7 +91,7 @@ class Contador extends React.Component {
     }
 
     resetCount = () => {
-        this.setState((prevState) => {
+        this.setState(() => {
             return {
                 contadorNum: 0
             }
