@@ -1,20 +1,33 @@
 import React from 'react'
 import Astronauta from '../../img/astronaut.png'
 import Globo from '../../img/globe.png'
+import BtnCadastro from '../../componentes/formulario/BtnCadastro';
+
+//props declarado na página Cadastro quando chamamos Inicial:
+
+// props = {
+//   formConteudo
+// }
 
 export default function Inicial(props){
   return (
     <div className='pagina'>
       <h1>Escolha o tipo de cadastro:</h1>
       <div className='pagina__botao'>
-        <button className='botao-icone'>
-          <img src={Astronauta} className='botao-imagem' alt='Ícone Astronauta'/>
-          <span>Pessoa Física</span>
-        </button>
-        <button className='botao-icone'>
-          <img src={Globo} className='botao-imagem' alt='Ícone Globo'/>
-          <span>Pessoa Jurídica</span>
-        </button>
+        <BtnCadastro
+          srcImg={Astronauta}
+          altImg='Ícone Astronauta'
+          textoBtn='Pessoa Física'
+          valorBtn='PF'
+          acaoBtn={props.formConteudo}
+        />
+        <BtnCadastro
+          srcImg={Globo}
+          altImg='Ícone Globo'
+          textoBtn='Pessoa Jurídica'
+          valorBtn='PJ'
+          acaoBtn={props.formConteudo}x
+        />
       </div>
     </div>
   )
