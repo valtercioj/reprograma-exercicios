@@ -4,7 +4,7 @@ import './App.css';
 
 //paginas
 import Home from './paginas/Home';
-import Cadastro from './paginas/cadastro/Cadastro';
+import Cadastro from './paginas/Cadastro';
 import Chat from './paginas/Chat';
 
 //componentes

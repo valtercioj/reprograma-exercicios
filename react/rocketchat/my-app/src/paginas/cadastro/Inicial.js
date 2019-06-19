@@ -6,7 +6,7 @@ import BtnCadastro from '../../componentes/formulario/BtnCadastro';
 //props declarado na página Cadastro quando chamamos Inicial:
 
 // props = {
-//   formConteudo
+//   cadastroConteudo
 // }
 
 export default function Inicial(props){
@@ -19,14 +19,14 @@ export default function Inicial(props){
           altImg='Ícone Astronauta'
           textoBtn='Pessoa Física'
           valorBtn='PF'
-          acaoBtn={props.formConteudo}
+          acaoBtn={props.cadastroConteudo}
         />
         <BtnCadastro
           srcImg={Globo}
           altImg='Ícone Globo'
           textoBtn='Pessoa Jurídica'
           valorBtn='PJ'
-          acaoBtn={props.formConteudo}x
+          acaoBtn={props.cadastroConteudo}x
         />
       </div>
     </div>
