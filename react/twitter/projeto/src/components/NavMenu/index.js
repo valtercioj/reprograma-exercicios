@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import navMenuStyles from "./navMenu.module.css";
+import { Link } from "react-router-dom";
 
 export default class NavMenu extends Component {
   render() {
@@ -8,8 +9,7 @@ export default class NavMenu extends Component {
         <ul className={navMenuStyles.navMenu__lista}>
           <li className={navMenuStyles.navMenu__item}>
             <a className={navMenuStyles.navMenu__link} href="/">
-              Bem vindo(a): <br />
-              <strong>{this.props.usuario}</strong>
+              Bem-vindo(a):<br /><strong>@{this.props.usuario}</strong>
             </a>
           </li>
           <li className={navMenuStyles.navMenu__item}>
@@ -23,9 +23,10 @@ export default class NavMenu extends Component {
             </a>
           </li>
           <li className={navMenuStyles.navMenu__item}>
-            <a className={navMenuStyles.navMenu__link} href="/logout">
+            {/* componente Link utilizado somente para redirecionar para link interno. para links externos, usar a tag <a> */}
+            <Link className={navMenuStyles.navMenu__link} to="/login" onClick={() => {localStorage.clear()}}>
               Logout
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

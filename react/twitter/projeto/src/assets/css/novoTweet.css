@@ -18,7 +18,7 @@
   resize: none;
   padding: 8px;
   height: 40px;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .novoTweet__editor:not(:empty),
@@ -26,6 +26,10 @@
   height: 80px;
   box-shadow: 0 0 0 1px #ABE6F8;
   outline: 0;
+}
+
+.novoTweet__editor::placeholder{
+  font-size: 14px;
 }
 
 .novoTweet__status {

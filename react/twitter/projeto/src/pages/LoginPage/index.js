@@ -33,7 +33,8 @@ class LoginPage extends Component {
         return resp.json() //json() é uma função para pegar apenas o retorno do back-end (no caso, o token). json() também é uma promise, por isso precisamos do 'then' novamente para acessar o que ela retorna
       })
       .then((respJson) => {
-        localStorage.setItem('TOKEN', respJson.token) //os parâmetros de setItem são (key, value), que podemos usar depois para getItem e removeItem (todos métodos do localStorage)
+        localStorage.setItem('USUARIO', dadosLogin.login)
+        localStorage.setItem('TOKEN', respJson.token) //os parâmetros de setItem são (key, value). depois podemos usar 'key' para getItem e removeItem (todos métodos do localStorage)
         //localStorage é como se fosse um banco de dados do navegador, usado pelo front-end para armazenar info
         this.props.history.push('/') //router-dom tem a props history, que pega todo o histórico da rota. com o método push()  acessamos a rota desejada (no caso, Home)
       })
@@ -48,9 +49,6 @@ class LoginPage extends Component {
   }
 
   render() {
-    let inputLogin = '';
-    let inputSenha = '';
-
     return (
       <Fragment>
         <Cabecalho />

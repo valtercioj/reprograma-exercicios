@@ -5,42 +5,51 @@ import Dashboard from '../../components/Dashboard'
 import Widget from '../../components/Widget'
 import TrendsArea from '../../components/TrendsArea'
 import Tweet from '../../components/Tweet'
+import { postTweet } from '../../service/tweets'
 
 class Home extends Component {
   constructor() {
     super();
     this.state = {
       novoTweet: '',
-      tweets: []
+      tweets: [],
     }
   }
 
   adicionaTweet = (event) => {
     event.preventDefault();
-    this.setState(stateAnterior => ({
-      tweets: [stateAnterior.novoTweet, ...stateAnterior.tweets],
-      novoTweet: ''
-    }))
+
+    const postNewTweet = {
+      conteudo: this.state.novoTweet,
+    }
+
+    postTweet(postNewTweet, localStorage.getItem('TOKEN'))
+    .then(resposta => {
+      this.setState(prevState => ({
+        tweets: [resposta.data, ...prevState.tweets],
+        novoTweet: ''
+      }))
+    })
   }
 
   render() {
-    console.log(this.state.tweets)
+    const { tweets, novoTweet } = this.state
     return (
       <Fragment>
         <Cabecalho>
-          <NavMenu usuario="@ninasolon" />
+          <NavMenu usuario={localStorage.getItem('USUARIO')} />
         </Cabecalho>
         <div className="container">
           <Dashboard>
             <Widget>
               <form className="novoTweet" onSubmit={this.adicionaTweet}>
                 <div className="novoTweet__editorArea">
-                  <span className={`${this.state.novoTweet.length > 140 ? 'novoTweet__status novoTweet__status--invalido' : 'novoTweet__status'}`}>
-                    {this.state.novoTweet.length}/{140 - this.state.novoTweet.length}
+                  <span className={`${novoTweet.length > 140 ? 'novoTweet__status novoTweet__status--invalido' : 'novoTweet__status'}`}>
+                    {novoTweet.length}/{140 - novoTweet.length}
                   </span>
                   <textarea
                     className="novoTweet__editor"
-                    value={this.state.novoTweet}
+                    value={novoTweet}
                     placeholder="O que está acontecendo?"
                     onChange={(event) => this.setState({ novoTweet: event.target.value })}>
                   </textarea>
@@ -48,7 +57,7 @@ class Home extends Component {
                 <button
                   type="submit"
                   className="novoTweet__envia"
-                  disabled={this.state.novoTweet.length > 140}
+                  disabled={novoTweet.length > 140}
                 >
                   Tweetar
                 </button>
@@ -62,8 +71,8 @@ class Home extends Component {
             <Widget>
               <div className="tweetsArea">
                 {
-                  this.state.tweets.length > 0 ? 
-                  this.state.tweets.map((item, index) => ( <Tweet texto={item} key={index} usuario="@ninasolon"/> )) :
+                  tweets.length > 0 ? 
+                  tweets.map((item, index) => ( <Tweet {...item} key={index} /> )) :
                   <p>Compartilhe seu primeiro tweet!</p>
                 }
               </div>
