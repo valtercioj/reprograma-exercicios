@@ -32,6 +32,13 @@ class Home extends Component {
     })
   }
 
+  removeTweet = (idRecebido) => {
+    const itemRemovido = this.state.tweets.filter(item => item._id !== idRecebido)
+    this.setState({
+      tweets: itemRemovido
+    })
+  }
+
   render() {
     const { tweets, novoTweet } = this.state
     return (
@@ -72,7 +79,12 @@ class Home extends Component {
               <div className="tweetsArea">
                 {
                   tweets.length > 0 ? 
-                  tweets.map((item, index) => ( <Tweet {...item} key={index} /> )) :
+                  tweets.map((item) => ( 
+                    <Tweet 
+                      {...item} 
+                      key={item._id} 
+                      remove={this.removeTweet}
+                    /> )) :
                   <p>Compartilhe seu primeiro tweet!</p>
                 }
               </div>
